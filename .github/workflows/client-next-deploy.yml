@@ -24,5 +24,5 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > keyfile
         chmod 600 keyfile
         mkdir -p ~/.ssh
-        cp known_hosts ~/.ssh/known_hosts
-        ssh -t -i keyfile ubuntu@ec2-54-215-220-243.us-west-1.compute.amazonaws.com "sudo bash /home/ubuntu/week-12-monorepo-full/apps/client-next/deploy.sh"
+        ssh-keyscan -H ec2-15-207-55-181.ap-south-1.compute.amazonaws.com >> ~/.ssh/known_hosts
+        ssh -t -i keyfile ubuntu@ec2-15-207-55-181.ap-south-1.compute.amazonaws.com "sudo bash /home/ubuntu/Monorepo-Deploy/apps/client-next/deploy.sh"
