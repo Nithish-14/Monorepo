@@ -6,7 +6,7 @@ on:
       - 'apps/express-backend/**'
       - 'packages/common/**'
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
